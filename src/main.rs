@@ -5,11 +5,13 @@ mod problems;
 use crate::menu::*;
 use crate::problem::*;
 use crate::problems::multiples_of_3_and_5::*;
+use crate::problems::even_fibonacci_numbers::*;
 
 fn main() {
     // TODO: clear terminal output at start
     let options: Vec<MenuOption> = vec!(
         MenuOption { description: String::from("Multiples of 3 and 5"), tag: MenuTag::MultiplesOf3And5 },
+        MenuOption { description: String::from("Even Fibonacci numbers"), tag: MenuTag::EvenFibonacciNumbers },
         MenuOption { description: String::from("Quit"), tag: MenuTag::Quit }
     );
     let menu = Menu::new(options);
@@ -23,6 +25,8 @@ fn main() {
             break;
         } else if option.tag == MenuTag::MultiplesOf3And5 {
             MultiplesOf3And5::new().execute(); 
+        } else if option.tag == MenuTag::EvenFibonacciNumbers {
+            EvenFibonacciNumbers::new().execute();
         }
     }
 }

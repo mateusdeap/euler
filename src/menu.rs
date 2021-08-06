@@ -37,5 +37,6 @@ pub struct MenuOption {
 #[derive(PartialEq, Copy, Clone)]
 pub enum MenuTag {
     MultiplesOf3And5,
+    EvenFibonacciNumbers,
     Quit
 }
